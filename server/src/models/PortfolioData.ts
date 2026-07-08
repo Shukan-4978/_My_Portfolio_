@@ -2,7 +2,7 @@ import mongoose, { Document, Schema } from 'mongoose';
 
 export interface IPortfolioData extends Document {
   key: string;
-  value: mongoose.Types.Mixed;
+  value: any;
   updatedAt: Date;
 }
 
