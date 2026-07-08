@@ -11,7 +11,7 @@ export interface Project {
   images: string[]
   github?: string
   live?: string
-  category: ('AI' | 'MERN' | 'Full Stack' | 'React' | 'Backend')[]
+  category: ('AI' | 'MERN' | 'Full Stack' | 'React' | 'Backend' | 'Frontend')[]
   featured: boolean
   order: number
   features?: string[]
