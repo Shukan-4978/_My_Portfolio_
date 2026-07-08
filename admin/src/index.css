@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 220 40% 8%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 243 75% 59%;
+    --radius: 0.75rem;
+    --brand: #6366f1;
+    --brand-secondary: #8b5cf6;
+    --sidebar-width: 260px;
+  }
+
+  * { box-sizing: border-box; border-color: hsl(var(--border)); }
+
+  html, body { 
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 10px; }
+}
+
+@layer components {
+  .admin-card {
+    @apply bg-card border border-border rounded-2xl;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+
+  .admin-input {
+    @apply w-full px-4 py-2.5 rounded-xl border border-border bg-secondary text-foreground text-sm outline-none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .admin-input:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+
+  .admin-btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm transition-all;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+  }
+
+  .admin-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
+  }
+
+  .admin-btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm transition-all text-muted-foreground hover:text-foreground hover:bg-secondary;
+  }
+
+  .admin-btn-danger {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-lg font-medium text-sm transition-all text-red-400 hover:text-red-300 hover:bg-red-500/10;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:bg-secondary;
+  }
+
+  .sidebar-link.active {
+    @apply text-white;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3));
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #a5b4fc;
+  }
+
+  .stat-card {
+    @apply admin-card p-5;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-emerald-500/15 text-emerald-400;
+  }
+
+  .badge-warning {
+    @apply badge bg-amber-500/15 text-amber-400;
+  }
+
+  .badge-error {
+    @apply badge bg-red-500/15 text-red-400;
+  }
+
+  .badge-info {
+    @apply badge bg-indigo-500/15 text-indigo-400;
+  }
+}
