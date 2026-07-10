@@ -254,7 +254,7 @@ export default function Experience() {
                       required
                       className="admin-input"
                       value={form.type}
-                      onChange={(e) => setForm((p) => ({ ...p, type: e.target.value }))}
+                      onChange={(e) => setForm((p) => ({ ...p, type: e.target.value as any }))}
                     />
                   </div>
                   <div>
