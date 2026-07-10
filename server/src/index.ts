@@ -31,7 +31,7 @@ app.use(
         .filter(Boolean);
 
       // Allow requests with no origin (e.g., mobile apps, curl)
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
         callback(null, true);
       } else {
         callback(new Error(`CORS: Origin '${origin}' not allowed`));
