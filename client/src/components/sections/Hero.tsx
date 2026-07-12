@@ -308,13 +308,10 @@ export default function Hero() {
                     '0 0 60px rgba(99,102,241,0.45), 0 0 120px rgba(139,92,246,0.2)',
                 }}
               >
-                <img src="/images/profile.png" alt="Shukan Prajapati" className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900" />
-                {/* Pulse ring */}
-                <motion.div
-                  className="absolute inset-0 rounded-full gradient-bg opacity-30"
-                  animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0, 0.3] }}
-                  transition={{ duration: 2.5, repeat: Infinity, ease: 'easeOut' }}
-                />
+                <div className="w-full h-full rounded-full bg-white dark:bg-slate-900 flex flex-col items-center justify-center p-2 text-center">
+                  <span className="text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-blue-500 to-cyan-400 leading-tight">Shukan</span>
+                  <span className="text-lg font-bold text-foreground leading-tight">Prajapati</span>
+                </div>
               </motion.div>
 
               {/* Orbit tech cards */}

@@ -70,8 +70,8 @@ export default function LoadingScreen() {
                   borderRadius: '9999px',
                 }}
               />
-              <div className="relative gradient-bg w-24 h-24 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/30">
-                <span className="text-white text-4xl font-extrabold tracking-tight">SP</span>
+              <div className="relative gradient-bg w-24 h-24 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/30 p-[3px]">
+                <img src="/images/profile.png" alt="Shukan Prajapati" className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900" />
               </div>
             </div>
 

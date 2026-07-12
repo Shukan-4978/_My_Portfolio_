@@ -121,9 +121,10 @@
   /* Glass morphism */
   .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--glass-border);
+    will-change: transform;
   }
 
   .glass-card {
@@ -279,8 +280,9 @@
 
   /* Blob */
   .blob {
-    @apply absolute rounded-full filter blur-2xl opacity-20 pointer-events-none;
-    animation: blob 7s infinite;
+    @apply absolute rounded-full filter blur-xl opacity-[0.15] pointer-events-none;
+    animation: blob 10s infinite;
+    will-change: transform;
   }
 
   /* Gradient border card */

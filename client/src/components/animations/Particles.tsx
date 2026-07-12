@@ -85,7 +85,7 @@ export default function Particles() {
         // Draw dot
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(99, 102, 241, 0.5)'
+        ctx.fillStyle = 'rgba(59, 130, 246, 0.5)'
         ctx.fill()
       })
 
@@ -102,7 +102,7 @@ export default function Particles() {
             ctx.beginPath()
             ctx.moveTo(a.x, a.y)
             ctx.lineTo(b.x, b.y)
-            ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`
+            ctx.strokeStyle = `rgba(59, 130, 246, ${alpha})`
             ctx.lineWidth   = 0.8
             ctx.stroke()
           }
