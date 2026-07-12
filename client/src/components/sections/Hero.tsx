@@ -308,7 +308,7 @@ export default function Hero() {
                     '0 0 60px rgba(99,102,241,0.45), 0 0 120px rgba(139,92,246,0.2)',
                 }}
               >
-                <img src="/images/profile.jpg" alt="Shukan Prajapati" className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900" />
+                <img src="/images/profile.png" alt="Shukan Prajapati" className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900" />
                 {/* Pulse ring */}
                 <motion.div
                   className="absolute inset-0 rounded-full gradient-bg opacity-30"
