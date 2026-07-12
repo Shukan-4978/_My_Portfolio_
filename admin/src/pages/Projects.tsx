@@ -162,7 +162,7 @@ function ProjectModal({ project, onClose, onSave }: ProjectModalProps) {
             </div>
             <div className="flex flex-wrap gap-1.5">
               {form.techStack.map((t, i) => (
-                <span key={i} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-indigo-500/15 text-indigo-400 border border-indigo-500/20">
+                <span key={i} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-blue-500/15 text-blue-400 border border-blue-500/20">
                   {t}
                   <button type="button" onClick={() => setForm((p) => ({ ...p, techStack: p.techStack.filter((_, j) => j !== i) }))}>
                     <X size={10} />
@@ -293,7 +293,7 @@ export default function Projects() {
       <div className="admin-card overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 className="animate-spin text-indigo-500 mx-auto" size={32} />
+            <Loader2 className="animate-spin text-blue-500 mx-auto" size={32} />
           </div>
         ) : projects.length === 0 ? (
           <div className="p-12 text-center text-muted-foreground">No projects yet. Add your first!</div>
@@ -345,7 +345,7 @@ export default function Projects() {
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => openEdit(p)}
-                          className="admin-btn-ghost p-1.5 hover:text-indigo-400"
+                          className="admin-btn-ghost p-1.5 hover:text-blue-400"
                           title="Edit"
                         >
                           <Pencil size={14} />

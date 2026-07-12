@@ -99,7 +99,7 @@ export default function Skills() {
       <div className="admin-card overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 className="animate-spin text-indigo-500 mx-auto" size={32} />
+            <Loader2 className="animate-spin text-blue-500 mx-auto" size={32} />
           </div>
         ) : (
           <div className="overflow-x-auto">
@@ -131,7 +131,7 @@ export default function Skills() {
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2">
                         <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden w-32">
-                          <div className="h-full bg-indigo-500 rounded-full" style={{ width: `${s.level}%` }} />
+                          <div className="h-full bg-blue-500 rounded-full" style={{ width: `${s.level}%` }} />
                         </div>
                         <span className="text-xs text-muted-foreground">{s.level}%</span>
                       </div>

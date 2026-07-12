@@ -126,7 +126,7 @@ export default function Hero() {
       aria-label="Hero section"
     >
       {/* ── Background blobs ─────────────────────────── */}
-      <Blob className="w-[520px] h-[520px] bg-indigo-500 -top-32 -left-32 opacity-[0.12]" />
+      <Blob className="w-[520px] h-[520px] bg-blue-500 -top-32 -left-32 opacity-[0.12]" />
       <Blob className="w-[460px] h-[460px] bg-violet-500 bottom-0 right-0 opacity-[0.1] animation-delay-4000" />
       <Blob className="w-[300px] h-[300px] bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.06] animation-delay-2000" />
 
@@ -209,7 +209,7 @@ export default function Hero() {
               <a
                 href="/resume.pdf"
                 download
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-muted-foreground hover:text-foreground border border-border hover:border-indigo-400 hover:bg-indigo-500/5 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-muted-foreground hover:text-foreground border border-border hover:border-blue-400 hover:bg-blue-500/5 transition-all duration-300"
               >
                 <Download size={16} />
                 Resume
@@ -231,7 +231,7 @@ export default function Hero() {
                     target={link.platform !== 'Email' ? '_blank' : undefined}
                     rel="noopener noreferrer"
                     aria-label={link.platform}
-                    className="text-muted-foreground hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-200"
+                    className="text-muted-foreground hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
                     whileHover={{ scale: 1.22, y: -3 }}
                     whileTap={{ scale: 0.92 }}
                   >
@@ -239,7 +239,7 @@ export default function Hero() {
                   </motion.a>
                 )
               })}
-              <span className="ml-2 w-16 h-px bg-gradient-to-r from-indigo-500/50 to-transparent" />
+              <span className="ml-2 w-16 h-px bg-gradient-to-r from-blue-500/50 to-transparent" />
             </motion.div>
 
             {/* Stats row */}
@@ -278,7 +278,7 @@ export default function Hero() {
             >
               {/* Outer rotating ring */}
               <motion.div
-                className="absolute rounded-full border border-indigo-500/20"
+                className="absolute rounded-full border border-blue-500/20"
                 style={{ width: 340, height: 340 }}
                 animate={{ rotate: 360 }}
                 transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}

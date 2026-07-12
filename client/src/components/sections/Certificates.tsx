@@ -63,19 +63,19 @@ export default function Certificates() {
               </div>
 
               {/* Title */}
-              <h3 className="font-bold text-base text-foreground mb-2 leading-snug group-hover:text-indigo-500 transition-colors">
+              <h3 className="font-bold text-base text-foreground mb-2 leading-snug group-hover:text-blue-500 transition-colors">
                 {cert.title}
               </h3>
 
               {/* Issuer */}
               <div className="flex items-center gap-1.5 text-sm text-muted-foreground mb-2">
-                <FaAward size={12} className="text-indigo-400" />
+                <FaAward size={12} className="text-blue-400" />
                 <span>{cert.issuer}</span>
               </div>
 
               {/* Date */}
               <div className="flex items-center gap-1.5 text-sm text-muted-foreground mb-4">
-                <FaCalendarAlt size={12} className="text-indigo-400" />
+                <FaCalendarAlt size={12} className="text-blue-400" />
                 <span>{formatMonthYear(cert.date)}</span>
               </div>
 
@@ -94,7 +94,7 @@ export default function Certificates() {
                     href={cert.credentialUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="ml-auto flex items-center gap-1.5 text-sm text-indigo-500 hover:text-indigo-600 font-medium transition-colors"
+                    className="ml-auto flex items-center gap-1.5 text-sm text-blue-500 hover:text-blue-600 font-medium transition-colors"
                   >
                     View <FaExternalLinkAlt size={11} />
                   </a>

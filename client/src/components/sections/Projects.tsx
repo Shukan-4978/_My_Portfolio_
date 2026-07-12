@@ -65,7 +65,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 href={project.live}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-500/80 backdrop-blur-sm rounded-lg text-white text-xs font-medium hover:bg-indigo-600/80 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-500/80 backdrop-blur-sm rounded-lg text-white text-xs font-medium hover:bg-blue-600/80 transition-colors"
               >
                 <FaExternalLinkAlt size={10} /> Live Demo
               </a>
@@ -83,7 +83,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {/* Category badges */}
         <div className="absolute top-3 right-3 flex flex-col gap-1">
           {project.category.slice(0, 2).map((cat) => (
-            <span key={cat} className="px-2 py-0.5 bg-indigo-600/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
+            <span key={cat} className="px-2 py-0.5 bg-blue-600/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
               {cat}
             </span>
           ))}
@@ -92,7 +92,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="font-bold text-lg mb-2 text-foreground group-hover:text-indigo-500 transition-colors">
+        <h3 className="font-bold text-lg mb-2 text-foreground group-hover:text-blue-500 transition-colors">
           {project.title}
         </h3>
         <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
@@ -114,7 +114,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <div className="space-y-1 mb-4">
             {project.features.slice(0, 3).map((feature) => (
               <div key={feature} className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
                 {feature}
               </div>
             ))}
@@ -138,7 +138,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               href={project.live}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-indigo-500 transition-colors ml-3"
+              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-blue-500 transition-colors ml-3"
             >
               <Eye size={14} /> Live
             </a>
@@ -224,7 +224,7 @@ export default function Projects() {
         {/* Projects Grid */}
         {loading ? (
           <div className="flex justify-center items-center py-20">
-            <Loader2 className="animate-spin text-indigo-500" size={40} />
+            <Loader2 className="animate-spin text-blue-500" size={40} />
           </div>
         ) : projects.length === 0 ? (
           <div className="text-center text-muted-foreground py-20">

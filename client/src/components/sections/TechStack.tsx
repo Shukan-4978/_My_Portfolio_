@@ -127,7 +127,7 @@ export default function TechStack() {
   return (
     <section id="skills" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-bg)' }}>
       {/* Background blobs */}
-      <div className="blob w-96 h-96 bg-indigo-500 top-0 right-0 opacity-5 animation-delay-2000" />
+      <div className="blob w-96 h-96 bg-blue-500 top-0 right-0 opacity-5 animation-delay-2000" />
 
       <div className="section-container" ref={ref}>
         {/* Header */}
@@ -151,7 +151,7 @@ export default function TechStack() {
 
         {loading ? (
           <div className="flex justify-center items-center py-20">
-            <Loader2 className="animate-spin text-indigo-500" size={40} />
+            <Loader2 className="animate-spin text-blue-500" size={40} />
           </div>
         ) : skills.length === 0 ? (
           <div className="text-center text-muted-foreground py-20">

@@ -13,7 +13,7 @@ const ACHIEVEMENT_ICONS: Record<string, React.ReactElement> = {
   'Open Source': <FaCodeBranch className="text-violet-500" />,
   LeetCode: <SiLeetcode className="text-orange-500" />,
   GitHub: <FaGithub className="text-foreground" />,
-  Award: <FaAward className="text-indigo-500" />,
+  Award: <FaAward className="text-blue-500" />,
   Badge: <FaStar className="text-yellow-500" />,
 }
 
@@ -47,7 +47,7 @@ export default function Achievements() {
 
   return (
     <section id="achievements" className="py-24 relative" style={{ background: 'var(--section-bg)' }}>
-      <div className="blob w-80 h-80 bg-indigo-500 top-10 left-10 opacity-5 animation-delay-6000" />
+      <div className="blob w-80 h-80 bg-blue-500 top-10 left-10 opacity-5 animation-delay-6000" />
 
       <div className="section-container" ref={ref}>
         {/* Header */}
@@ -82,7 +82,7 @@ export default function Achievements() {
               { label: 'Stars Earned', value: '15+', icon: <FaStar /> },
             ].map((stat) => (
               <div key={stat.label} className="text-center p-4 rounded-xl bg-secondary/50">
-                <div className="text-indigo-500 mb-1 flex justify-center">{stat.icon}</div>
+                <div className="text-blue-500 mb-1 flex justify-center">{stat.icon}</div>
                 <div className="text-2xl font-bold gradient-text">{stat.value}</div>
                 <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
               </div>
@@ -93,7 +93,7 @@ export default function Achievements() {
               href="https://github.com/Shukan-4978"
               target="_blank"
               rel="noreferrer"
-              className="text-sm text-indigo-500 hover:underline flex items-center gap-1"
+              className="text-sm text-blue-500 hover:underline flex items-center gap-1"
             >
               <FaGithub /> github.com/Shukan-4978
             </a>
@@ -102,7 +102,7 @@ export default function Achievements() {
 
         {loading ? (
           <div className="flex justify-center items-center py-20">
-            <Loader2 className="animate-spin text-indigo-500" size={40} />
+            <Loader2 className="animate-spin text-blue-500" size={40} />
           </div>
         ) : achievements.length === 0 ? (
           <div className="text-center text-muted-foreground py-20">
@@ -133,7 +133,7 @@ export default function Achievements() {
                         <span className="text-xs font-bold text-yellow-500">{achievement.rank}</span>
                       )}
                     </div>
-                    <h3 className="font-bold text-base text-foreground mt-2 group-hover:text-indigo-500 transition-colors">
+                    <h3 className="font-bold text-base text-foreground mt-2 group-hover:text-blue-500 transition-colors">
                       {achievement.title}
                     </h3>
                     <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
@@ -147,7 +147,7 @@ export default function Achievements() {
                         href={achievement.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-xs text-indigo-500 hover:underline mt-2 inline-block"
+                        className="text-xs text-blue-500 hover:underline mt-2 inline-block"
                       >
                         View →
                       </a>

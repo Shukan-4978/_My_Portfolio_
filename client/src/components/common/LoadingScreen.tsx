@@ -45,7 +45,7 @@ export default function LoadingScreen() {
         >
           {/* ── Background blobs ──────────────────────────────────── */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="blob w-96 h-96 bg-indigo-500 top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
+            <div className="blob w-96 h-96 bg-blue-500 top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
             <div className="blob w-80 h-80 bg-violet-500 bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 animation-delay-2000" />
           </div>
 
@@ -70,7 +70,7 @@ export default function LoadingScreen() {
                   borderRadius: '9999px',
                 }}
               />
-              <div className="relative gradient-bg w-24 h-24 rounded-2xl flex items-center justify-center shadow-2xl shadow-indigo-500/30">
+              <div className="relative gradient-bg w-24 h-24 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/30">
                 <span className="text-white text-4xl font-extrabold tracking-tight">SP</span>
               </div>
             </div>

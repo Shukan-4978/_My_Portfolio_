@@ -147,8 +147,8 @@ export default function Dashboard() {
                 href={action.href}
                 className="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary transition-colors group"
               >
-                <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-indigo-500/10 transition-colors">
-                  <action.icon size={15} className="text-muted-foreground group-hover:text-indigo-400 transition-colors" />
+                <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-blue-500/10 transition-colors">
+                  <action.icon size={15} className="text-muted-foreground group-hover:text-blue-400 transition-colors" />
                 </div>
                 <span className="text-sm text-foreground">{action.label}</span>
                 <span className="ml-auto text-muted-foreground text-xs">→</span>
@@ -162,7 +162,7 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
           { icon: CheckCircle, label: 'Portfolio Live', desc: 'All sections deployed', color: 'text-emerald-400' },
-          { icon: Clock, label: 'Last Updated', desc: new Date().toLocaleDateString(), color: 'text-indigo-400' },
+          { icon: Clock, label: 'Last Updated', desc: new Date().toLocaleDateString(), color: 'text-blue-400' },
           { icon: TrendingUp, label: 'Performance', desc: 'Lighthouse 95+ score', color: 'text-amber-400' },
         ].map((item, i) => (
           <motion.div

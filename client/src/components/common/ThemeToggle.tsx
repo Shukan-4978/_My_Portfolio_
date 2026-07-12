@@ -11,7 +11,7 @@ export default function ThemeToggle() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.88 }}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="relative w-9 h-9 rounded-xl flex items-center justify-center border border-border hover:border-indigo-500/50 hover:bg-indigo-500/10 transition-all duration-200 text-muted-foreground hover:text-foreground"
+      className="relative w-9 h-9 rounded-xl flex items-center justify-center border border-border hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-200 text-muted-foreground hover:text-foreground"
     >
       <motion.span
         key={isDark ? 'moon' : 'sun'}

@@ -199,10 +199,10 @@ function EducationItem({ edu, delay }: { edu: EduItem; delay: number }) {
         }}
       />
       {/* Dot */}
-      <div className="absolute left-[7px] top-1.5 w-3 h-3 rounded-full gradient-bg ring-2 ring-indigo-500/30 group-hover:ring-indigo-500/60 transition-all" />
+      <div className="absolute left-[7px] top-1.5 w-3 h-3 rounded-full gradient-bg ring-2 ring-blue-500/30 group-hover:ring-blue-500/60 transition-all" />
 
       {/* Card */}
-      <div className="glass-card p-4 group-hover:border-indigo-500/30 transition-all">
+      <div className="glass-card p-4 group-hover:border-blue-500/30 transition-all">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
           <span className="tag text-xs">{edu.year}</span>
           {edu.grade && (

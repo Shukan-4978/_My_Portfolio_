@@ -70,7 +70,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-bg)' }}>
-      <div className="blob w-96 h-96 bg-indigo-500 top-10 right-10 opacity-5 animation-delay-2000" />
+      <div className="blob w-96 h-96 bg-blue-500 top-10 right-10 opacity-5 animation-delay-2000" />
       <div className="blob w-72 h-72 bg-violet-500 bottom-10 left-10 opacity-5 animation-delay-4000" />
 
       <div className="section-container" ref={ref}>
@@ -108,7 +108,7 @@ export default function Contact() {
             {/* Info cards */}
             {[
               {
-                icon: <FaEnvelope className="text-indigo-500" />,
+                icon: <FaEnvelope className="text-blue-500" />,
                 label: 'Email',
                 value: 'shukanp0509@gmail.com',
                 href: 'mailto:shukanp0509@gmail.com',
@@ -143,7 +143,7 @@ export default function Contact() {
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-sm font-medium text-foreground hover:text-indigo-500 transition-colors"
+                      className="text-sm font-medium text-foreground hover:text-blue-500 transition-colors"
                     >
                       {item.value}
                     </a>
@@ -206,7 +206,7 @@ export default function Contact() {
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Your full name"
-                      className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 ${
+                      className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 ${
                         errors.name ? 'border-red-500' : 'border-border'
                       }`}
                     />
@@ -225,7 +225,7 @@ export default function Contact() {
                       value={form.email}
                       onChange={handleChange}
                       placeholder="your@email.com"
-                      className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 ${
+                      className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 ${
                         errors.email ? 'border-red-500' : 'border-border'
                       }`}
                     />
@@ -244,7 +244,7 @@ export default function Contact() {
                     value={form.subject}
                     onChange={handleChange}
                     placeholder="Project Inquiry / Collaboration / Job Opportunity"
-                    className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 ${
+                    className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 ${
                       errors.subject ? 'border-red-500' : 'border-border'
                     }`}
                   />
@@ -263,7 +263,7 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Tell me about your project, timeline, and budget..."
-                    className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all resize-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 ${
+                    className={`w-full px-4 py-3 rounded-xl border bg-background/50 text-foreground placeholder:text-muted-foreground text-sm outline-none transition-all resize-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 ${
                       errors.message ? 'border-red-500' : 'border-border'
                     }`}
                   />

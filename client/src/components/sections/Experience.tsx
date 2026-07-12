@@ -49,7 +49,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-24 relative" style={{ background: 'var(--section-bg)' }}>
-      <div className="blob w-72 h-72 bg-indigo-500 top-20 right-20 opacity-5 animation-delay-4000" />
+      <div className="blob w-72 h-72 bg-blue-500 top-20 right-20 opacity-5 animation-delay-4000" />
 
       <div className="section-container" ref={ref}>
         {/* Header */}
@@ -70,7 +70,7 @@ export default function Experience() {
 
         {loading ? (
           <div className="flex justify-center items-center py-20">
-            <Loader2 className="animate-spin text-indigo-500" size={40} />
+            <Loader2 className="animate-spin text-blue-500" size={40} />
           </div>
         ) : experiences.length === 0 ? (
           <div className="text-center text-muted-foreground py-20">
@@ -80,7 +80,7 @@ export default function Experience() {
           /* Timeline */
           <div className="relative max-w-3xl mx-auto">
             {/* Vertical line */}
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-indigo-500/40 to-transparent" />
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-500/40 to-transparent" />
 
             <div className="space-y-8">
               {experiences.map((exp, i) => (
@@ -93,8 +93,8 @@ export default function Experience() {
                   className="relative pl-16"
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-8 top-6 w-6 h-6 rounded-full border-2 border-indigo-500 bg-background flex items-center justify-center -translate-x-1/2 z-10">
-                    <div className="w-2 h-2 rounded-full bg-indigo-500" />
+                  <div className="absolute left-8 top-6 w-6 h-6 rounded-full border-2 border-blue-500 bg-background flex items-center justify-center -translate-x-1/2 z-10">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
                   </div>
 
                   {/* Card */}
@@ -104,7 +104,7 @@ export default function Experience() {
                       <div>
                         <h3 className="font-bold text-xl text-foreground">{exp.role}</h3>
                         <div className="flex items-center gap-2 mt-1">
-                          <FaBriefcase className="text-indigo-500" size={13} />
+                          <FaBriefcase className="text-blue-500" size={13} />
                           <span className="text-muted-foreground font-medium">{exp.company}</span>
                         </div>
                       </div>
@@ -138,7 +138,7 @@ export default function Experience() {
                     <ul className="space-y-2 mb-4">
                       {exp.description.map((item, j) => (
                         <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                           {item}
                         </li>
                       ))}

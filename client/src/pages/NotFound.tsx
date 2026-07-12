@@ -30,7 +30,7 @@ export default function NotFound() {
         {/* Decorative code snippet */}
         <div className="glass-card p-4 mb-8 max-w-sm mx-auto text-left font-mono text-sm">
           <span className="text-muted-foreground">const </span>
-          <span className="text-indigo-400">page</span>
+          <span className="text-blue-400">page</span>
           <span className="text-muted-foreground"> = </span>
           <span className="text-emerald-400">router</span>
           <span className="text-foreground">.find(</span>

@@ -191,12 +191,12 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
                       className={[
                         'flex items-center gap-3 mx-2 px-3 py-2.5 rounded-xl cursor-pointer transition-colors duration-150',
                         isActive
-                          ? 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400'
+                          ? 'bg-blue-500/10 text-blue-500 dark:text-blue-400'
                           : 'text-foreground hover:bg-muted',
                       ].join(' ')}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <span className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-indigo-500/15' : 'bg-muted'}`}>
+                      <span className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-blue-500/15' : 'bg-muted'}`}>
                         <Hash size={13} />
                       </span>
                       <div className="flex-1 min-w-0">

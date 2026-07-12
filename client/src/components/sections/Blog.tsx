@@ -24,7 +24,7 @@ export default function Blog() {
 
   return (
     <section id="blog" className="py-24 relative overflow-hidden">
-      <div className="blob w-80 h-80 bg-indigo-500 bottom-20 right-10 opacity-5 animation-delay-2000" />
+      <div className="blob w-80 h-80 bg-blue-500 bottom-20 right-10 opacity-5 animation-delay-2000" />
 
       <div className="section-container" ref={ref}>
         {/* Header */}
@@ -85,7 +85,7 @@ export default function Blog() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-bold text-xl mb-2 text-foreground group-hover:text-indigo-500 transition-colors leading-snug">
+                  <h3 className="font-bold text-xl mb-2 text-foreground group-hover:text-blue-500 transition-colors leading-snug">
                     {blog.title}
                   </h3>
 
@@ -103,7 +103,7 @@ export default function Blog() {
                       <span>•</span>
                       <span>{formatDate(blog.publishedAt)}</span>
                     </div>
-                    <button className="flex items-center gap-1.5 text-sm text-indigo-500 hover:text-indigo-600 font-medium transition-colors">
+                    <button className="flex items-center gap-1.5 text-sm text-blue-500 hover:text-blue-600 font-medium transition-colors">
                       Read <FaArrowRight size={12} />
                     </button>
                   </div>

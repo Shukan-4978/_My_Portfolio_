@@ -11,7 +11,7 @@ export default function AdminLayout() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
-        <Loader2 className="animate-spin text-indigo-500" size={32} />
+        <Loader2 className="animate-spin text-blue-500" size={32} />
       </div>
     )
   }

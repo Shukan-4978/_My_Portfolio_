@@ -84,7 +84,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
-            <span className="gradient-bg w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg group-hover:shadow-indigo-500/40 transition-shadow duration-300">
+            <span className="gradient-bg w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg group-hover:shadow-blue-500/40 transition-shadow duration-300">
               SP
             </span>
             <span className="hidden sm:block font-semibold text-foreground tracking-tight">
@@ -104,7 +104,7 @@ export default function Navbar() {
                     className={[
                       'relative px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200',
                       isActive
-                        ? 'text-indigo-500 dark:text-indigo-400'
+                        ? 'text-blue-500 dark:text-blue-400'
                         : 'text-muted-foreground hover:text-foreground',
                     ].join(' ')}
                     whileHover={{ y: -1 }}
