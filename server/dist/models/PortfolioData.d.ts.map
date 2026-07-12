@@ -1,0 +1,1 @@
+{"version":3,"file":"PortfolioData.d.ts","sourceRoot":"","sources":["../../src/models/PortfolioData.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,EAAE,EAAE,QAAQ,EAAU,MAAM,UAAU,CAAC;AAEtD,MAAM,WAAW,cAAe,SAAQ,QAAQ;IAC9C,GAAG,EAAE,MAAM,CAAC;IACZ,KAAK,EAAE,GAAG,CAAC;IACX,SAAS,EAAE,IAAI,CAAC;CACjB;AAuBD,QAAA,MAAM,aAAa;;;;OAGlB,CAAC;AAEF,eAAe,aAAa,CAAC"}

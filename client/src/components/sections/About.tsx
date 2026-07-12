@@ -7,13 +7,8 @@
 import { motion } from 'framer-motion'
 import {
   FaCheck,
-  FaCode,
-  FaRocket,
-  FaGraduationCap,
   FaClock,
   FaProjectDiagram,
-  FaGithub,
-  FaBrain,
 } from 'react-icons/fa'
 import { useInView } from '@/hooks/useInView'
 import { useCounter } from '@/hooks/useCounter'
@@ -226,31 +221,6 @@ function EducationItem({ edu, delay }: { edu: EduItem; delay: number }) {
   )
 }
 
-// ─── Differentiator Card ──────────────────────────────────────
-interface DiffCard {
-  icon: React.ReactNode
-  title: string
-  desc: string
-}
-
-function DiffCard({ card, delay }: { card: DiffCard; delay: number }) {
-  return (
-    <motion.div
-      className="glass-card p-6 flex flex-col gap-3 hover-lift group"
-      custom={delay}
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-60px' }}
-    >
-      <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center text-white text-xl shadow-md group-hover:scale-110 transition-transform">
-        {card.icon}
-      </div>
-      <h4 className="font-bold text-foreground">{card.title}</h4>
-      <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
-    </motion.div>
-  )
-}
 
 // ─── Main About Component ─────────────────────────────────────
 export default function About() {
@@ -259,23 +229,7 @@ export default function About() {
   // Scroll trigger for counter cards
   const { ref: statsRef, isInView: statsInView } = useInView({ threshold: 0.3, once: true })
 
-  const DIFF_CARDS: DiffCard[] = [
-    {
-      icon: <FaCode />,
-      title: 'Clean Code Advocate',
-      desc: 'I write maintainable, well-documented code following SOLID principles and industry best practices.',
-    },
-    {
-      icon: <FaRocket />,
-      title: 'Performance Focused',
-      desc: 'From lazy loading to DB indexing, I obsess over milliseconds so your users never wait.',
-    },
-    {
-      icon: <FaGraduationCap />,
-      title: 'Continuous Learner',
-      desc: 'The tech landscape never stops — neither do I. New tools, patterns, and ideas every week.',
-    },
-  ]
+
 
   return (
     <section
@@ -402,34 +356,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* ════════════════════════════════════════════
-            DIFFERENTIATORS CARDS
-        ════════════════════════════════════════════ */}
-        <div className="flex flex-col gap-8">
-          {/* Label */}
-          <motion.div
-            className="text-center flex flex-col items-center gap-2"
-            custom={0}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
-          >
-            <span className="text-sm font-semibold gradient-text uppercase tracking-widest">
-              My Edge
-            </span>
-            <h3 className="text-3xl font-bold text-foreground">
-              What Makes Me{' '}
-              <span className="gradient-text">Different</span>
-            </h3>
-          </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {DIFF_CARDS.map((card, i) => (
-              <DiffCard key={card.title} card={card} delay={i * 0.1} />
-            ))}
-          </div>
-        </div>
 
       </div>
     </section>

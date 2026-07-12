@@ -121,8 +121,8 @@
   /* Glass morphism */
   .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
   }
 
@@ -279,7 +279,7 @@
 
   /* Blob */
   .blob {
-    @apply absolute rounded-full filter blur-3xl opacity-20 pointer-events-none;
+    @apply absolute rounded-full filter blur-2xl opacity-20 pointer-events-none;
     animation: blob 7s infinite;
   }
 
