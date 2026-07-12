@@ -29,7 +29,7 @@ app.use((0, cors_1.default)({
             .map((o) => o.trim())
             .filter(Boolean);
         // Allow requests with no origin (e.g., mobile apps, curl)
-        if (!origin || allowedOrigins.includes(origin)) {
+        if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
             callback(null, true);
         }
         else {

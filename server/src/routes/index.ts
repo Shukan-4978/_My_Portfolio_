@@ -6,8 +6,7 @@ import experienceRoutes from './experience';
 import certificateRoutes from './certificates';
 import achievementRoutes from './achievements';
 import blogRoutes from './blogs';
-import testimonialRoutes from './testimonials';
-import serviceRoutes from './services';
+
 import messageRoutes from './messages';
 import portfolioDataRoutes from './portfolioData';
 import visitorRoutes from './visitors';
@@ -33,8 +32,7 @@ router.use('/experience', experienceRoutes);
 router.use('/certificates', certificateRoutes);
 router.use('/achievements', achievementRoutes);
 router.use('/blogs', blogRoutes);
-router.use('/testimonials', testimonialRoutes);
-router.use('/services', serviceRoutes);
+
 router.use('/messages', messageRoutes);
 router.use('/portfolio', portfolioDataRoutes);
 router.use('/visitors', visitorRoutes);
