@@ -9,8 +9,6 @@ const TechStack = lazy(() => import('@/components/sections/TechStack'))
 const Projects = lazy(() => import('@/components/sections/Projects'))
 const Experience = lazy(() => import('@/components/sections/Experience'))
 const Achievements = lazy(() => import('@/components/sections/Achievements'))
-const Services = lazy(() => import('@/components/sections/Services'))
-const Testimonials = lazy(() => import('@/components/sections/Testimonials'))
 const Contact = lazy(() => import('@/components/sections/Contact'))
 
 // Simple section skeleton
@@ -48,12 +46,7 @@ export default function Home() {
       <Suspense fallback={<SectionSkeleton />}>
         <Achievements />
       </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <Services />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <Testimonials />
-      </Suspense>
+
       <Suspense fallback={<SectionSkeleton />}>
         <Contact />
       </Suspense>

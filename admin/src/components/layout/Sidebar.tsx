@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useAuth } from '@/context/AuthContext'
 import {
   LayoutDashboard, FolderOpen, Wrench, Briefcase,
-  Award, Trophy, BookOpen, Settings,
-  FileText, Users, Star, LogOut, ChevronLeft, Menu,
+  Award, Trophy, BookOpen,
+  FileText, Users, LogOut, ChevronLeft, Menu,
   Send, Link, Search, BarChart3
 } from 'lucide-react'
 
@@ -16,8 +16,7 @@ const NAV_ITEMS = [
   { icon: Award, label: 'Certificates', to: '/certificates' },
   { icon: Trophy, label: 'Achievements', to: '/achievements' },
   { icon: BookOpen, label: 'Blog', to: '/blogs' },
-  { icon: Star, label: 'Testimonials', to: '/testimonials' },
-  { icon: Settings, label: 'Services', to: '/services' },
+
   { icon: Send, label: 'Messages', to: '/messages' },
   { icon: Users, label: 'Visitors', to: '/visitors' },
   { icon: BarChart3, label: 'Analytics', to: '/analytics' },

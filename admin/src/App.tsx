@@ -11,8 +11,7 @@ import Experience from '@/pages/Experience'
 import Certificates from '@/pages/Certificates'
 import Achievements from '@/pages/Achievements'
 import Blogs from '@/pages/Blogs'
-import Testimonials from '@/pages/Testimonials'
-import Services from '@/pages/Services'
+
 import Messages from '@/pages/Messages'
 import PortfolioData from '@/pages/PortfolioData'
 
@@ -31,8 +30,7 @@ export default function App() {
             <Route path="/certificates" element={<Certificates />} />
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/services" element={<Services />} />
+
             <Route path="/messages" element={<Messages />} />
             <Route path="/portfolio-data" element={<PortfolioData />} />
             <Route path="/social-links" element={<PortfolioData />} />

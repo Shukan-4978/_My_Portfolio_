@@ -16,7 +16,6 @@ const SECTIONS: Section[] = [
   { id: 'experience',   label: 'Experience',   desc: 'Work history & roles'      },
   { id: 'certificates', label: 'Certificates', desc: 'Certifications & courses'  },
   { id: 'achievements', label: 'Achievements', desc: 'Awards & milestones'       },
-  { id: 'services',     label: 'Services',     desc: 'What I can do for you'     },
   { id: 'blog',         label: 'Blog',         desc: 'Articles & write-ups'      },
   { id: 'contact',      label: 'Contact',      desc: 'Get in touch'              },
 ]
