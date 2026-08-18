@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useAuth } from '@/context/AuthContext'
 import {
   LayoutDashboard, FolderOpen, Wrench, Briefcase,
-  Award, Trophy, BookOpen,
+  Award, BookOpen,
   FileText, Users, LogOut, ChevronLeft, Menu,
   Send, Link, Search, BarChart3
 } from 'lucide-react'
