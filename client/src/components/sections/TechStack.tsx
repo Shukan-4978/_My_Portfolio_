@@ -164,21 +164,7 @@ export default function TechStack() {
           </>
         )}
 
-        {/* Summary chips */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.6 }}
-          className="mt-16 flex flex-wrap gap-3 justify-center"
-        >
-          {[
-            '⚡ 30+ Technologies',
-            '🚀 3+ Years Learning',
-            '💡 Always Exploring New Tools',
-          ].map((txt) => (
-            <span key={txt} className="tag text-sm px-4 py-2">{txt}</span>
-          ))}
-        </motion.div>
+
       </div>
     </section>
   )
