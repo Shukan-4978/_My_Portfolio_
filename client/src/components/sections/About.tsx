@@ -238,8 +238,7 @@ export default function About() {
       className="py-20 lg:py-28 relative overflow-hidden bg-background"
       aria-label="About section"
     >
-      {/* Subtle section background blob */}
-      <div className="blob w-[500px] h-[500px] bg-violet-500 opacity-[0.05] top-0 right-0 pointer-events-none" />
+
 
       <div className="section-container relative z-10 flex flex-col gap-20">
 
