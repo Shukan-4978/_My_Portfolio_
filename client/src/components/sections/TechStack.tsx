@@ -95,7 +95,6 @@ function SkillCard({ skill, index }: SkillCardProps) {
 }
 
 export default function TechStack() {
-  const [activeCategory, setActiveCategory] = useState<SkillCategory>('Frontend')
   const [skills, setSkills] = useState<Skill[]>([])
   const [loading, setLoading] = useState(true)
   const { ref, isInView } = useInView()
@@ -114,15 +113,7 @@ export default function TechStack() {
     fetchSkills()
   }, [])
 
-  const filteredSkills = skills.filter((s) => s.category === activeCategory)
-  const availableCategories = CATEGORIES.filter((c) => skills.some((s) => s.category === c))
 
-  // Ensure active category is valid when data loads
-  useEffect(() => {
-    if (!loading && availableCategories.length > 0 && !availableCategories.includes(activeCategory)) {
-      setActiveCategory(availableCategories[0])
-    }
-  }, [skills, loading, activeCategory, availableCategories])
 
   return (
     <section id="skills" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-bg)' }}>
@@ -159,41 +150,17 @@ export default function TechStack() {
           </div>
         ) : (
           <>
-            {/* Category Tabs */}
+            {/* Skills Grid */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.2 }}
-              className="flex flex-wrap gap-2 justify-center mb-10"
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={stagger}
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
             >
-              {availableCategories.map((category) => (
-                <motion.button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`skill-tab ${activeCategory === category ? 'active' : ''}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {category}
-                </motion.button>
+              {skills.map((skill, i) => (
+                <SkillCard key={skill._id} skill={skill} index={i} />
               ))}
             </motion.div>
-
-            {/* Skills Grid */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeCategory}
-                initial="hidden"
-                animate="visible"
-                exit={{ opacity: 0, y: -10 }}
-                variants={stagger}
-                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
-              >
-                {filteredSkills.map((skill, i) => (
-                  <SkillCard key={skill._id} skill={skill} index={i} />
-                ))}
-              </motion.div>
-            </AnimatePresence>
           </>
         )}
 
