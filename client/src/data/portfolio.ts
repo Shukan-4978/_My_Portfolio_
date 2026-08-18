@@ -57,10 +57,10 @@ export const SKILLS_DATA: Skill[] = [
   { _id: '9', name: 'REST APIs', icon: 'api', category: 'API', level: 88, yearsExp: 2 },
   // Database
   { _id: '11', name: 'MongoDB', icon: 'mongodb', category: 'Database', level: 85, yearsExp: 2 },
-  { _id: '13', name: 'Redis', icon: 'redis', category: 'Database', level: 60, yearsExp: 0.5 },
+
   // Languages
   { _id: '14', name: 'JavaScript', icon: 'javascript', category: 'Languages', level: 92, yearsExp: 3 },
-  { _id: '15', name: 'Python', icon: 'python', category: 'Languages', level: 70, yearsExp: 1.5 },
+
   // State Management
   { _id: '16', name: 'Redux Toolkit', icon: 'redux', category: 'State Management', level: 80, yearsExp: 1.5 },
   // Authentication
@@ -82,6 +82,7 @@ export const SKILLS_DATA: Skill[] = [
   // AI Tools
   { _id: '28', name: 'OpenAI API', icon: 'openai', category: 'AI Tools', level: 70, yearsExp: 0.5 },
   { _id: '29', name: 'Gemini API', icon: 'gemini', category: 'AI Tools', level: 65, yearsExp: 0.5 },
+  { _id: '29b', name: 'Claude AI', icon: 'claude', category: 'AI Tools', level: 65, yearsExp: 0.5 },
   // Libraries
   { _id: '30', name: 'Framer Motion', icon: 'framer', category: 'Libraries', level: 80, yearsExp: 1 },
 ]

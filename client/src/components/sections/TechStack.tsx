@@ -5,10 +5,10 @@ import type { SkillCategory, Skill } from '@/types'
 import api from '@/services/api'
 import {
   SiReact, SiTypescript, SiNextdotjs, SiTailwindcss, SiHtml5,
-  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiRedis,
-  SiJavascript, SiPython, SiRedux,
+  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
+  SiJavascript, SiRedux,
   SiJsonwebtokens, SiVercel, SiCloudinary, SiDocker,
-  SiGit, SiGithub, SiJest, SiGraphql, SiRender
+  SiGit, SiGithub, SiJest, SiGraphql, SiRender, SiClaude
 } from 'react-icons/si'
 import { FaServer, FaDatabase, FaBrain, FaAws, FaCss3, FaRobot } from 'react-icons/fa'
 import { Loader2 } from 'lucide-react'
@@ -17,12 +17,12 @@ const SKILL_ICON_MAP: Record<string, React.ReactElement> = {
   react: <SiReact />, typescript: <SiTypescript />, nextjs: <SiNextdotjs />,
   tailwind: <SiTailwindcss />, html: <SiHtml5 />, css: <FaCss3 />,
   nodejs: <SiNodedotjs />, express: <SiExpress />, mongodb: <SiMongodb />,
-  postgresql: <SiPostgresql />, redis: <SiRedis />, javascript: <SiJavascript />,
-  python: <SiPython />, redux: <SiRedux />, zustand: <FaDatabase />,
+  postgresql: <SiPostgresql />, javascript: <SiJavascript />,
+  redux: <SiRedux />, zustand: <FaDatabase />,
   jwt: <SiJsonwebtokens />, oauth: <FaServer />, vercel: <SiVercel />,
   cloudinary: <SiCloudinary />, aws: <FaAws />, docker: <SiDocker />,
   git: <SiGit />, github: <SiGithub />, jest: <SiJest />,
-  openai: <FaRobot />, langchain: <FaBrain />, api: <FaServer />,
+  openai: <FaRobot />, langchain: <FaBrain />, claude: <SiClaude />, api: <FaServer />,
   graphql: <SiGraphql />, framer: <SiReact />, render: <SiRender />,
 }
 
@@ -30,11 +30,11 @@ const SKILL_COLORS: Record<string, string> = {
   react: '#61DAFB', typescript: '#3178C6', nextjs: '#000000',
   tailwind: '#06B6D4', html: '#E34F26', css: '#1572B6',
   nodejs: '#339933', express: '#000000', mongodb: '#47A248',
-  postgresql: '#4169E1', redis: '#DC382D', javascript: '#F7DF1E',
-  python: '#3776AB', redux: '#764ABC', vercel: '#000000',
+  postgresql: '#4169E1', javascript: '#F7DF1E',
+  redux: '#764ABC', vercel: '#000000',
   cloudinary: '#3448C5', aws: '#FF9900', docker: '#2496ED',
   git: '#F05032', github: '#181717', jest: '#C21325',
-  openai: '#412991', graphql: '#E10098', render: '#46E3B7',
+  openai: '#412991', claude: '#D97757', graphql: '#E10098', render: '#46E3B7',
 }
 
 const CATEGORIES: SkillCategory[] = [
