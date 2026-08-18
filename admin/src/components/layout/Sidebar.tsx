@@ -14,7 +14,7 @@ const NAV_ITEMS = [
   { icon: Wrench, label: 'Skills', to: '/skills' },
   { icon: Briefcase, label: 'Experience', to: '/experience' },
   { icon: Award, label: 'Certificates', to: '/certificates' },
-  { icon: Trophy, label: 'Achievements', to: '/achievements' },
+
   { icon: BookOpen, label: 'Blog', to: '/blogs' },
 
   { icon: Send, label: 'Messages', to: '/messages' },

@@ -4,7 +4,7 @@ import projectRoutes from './projects';
 import skillRoutes from './skills';
 import experienceRoutes from './experience';
 import certificateRoutes from './certificates';
-import achievementRoutes from './achievements';
+
 import blogRoutes from './blogs';
 
 import messageRoutes from './messages';
@@ -30,7 +30,7 @@ router.use('/projects', projectRoutes);
 router.use('/skills', skillRoutes);
 router.use('/experience', experienceRoutes);
 router.use('/certificates', certificateRoutes);
-router.use('/achievements', achievementRoutes);
+
 router.use('/blogs', blogRoutes);
 
 router.use('/messages', messageRoutes);

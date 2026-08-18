@@ -15,7 +15,7 @@ const SECTIONS: Section[] = [
   { id: 'projects',     label: 'Projects',     desc: 'Things I have built'       },
   { id: 'experience',   label: 'Experience',   desc: 'Work history & roles'      },
   { id: 'certificates', label: 'Certificates', desc: 'Certifications & courses'  },
-  { id: 'achievements', label: 'Achievements', desc: 'Awards & milestones'       },
+
   { id: 'blog',         label: 'Blog',         desc: 'Articles & write-ups'      },
   { id: 'contact',      label: 'Contact',      desc: 'Get in touch'              },
 ]

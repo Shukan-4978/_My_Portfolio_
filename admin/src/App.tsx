@@ -9,7 +9,7 @@ import Projects from '@/pages/Projects'
 import Skills from '@/pages/Skills'
 import Experience from '@/pages/Experience'
 import Certificates from '@/pages/Certificates'
-import Achievements from '@/pages/Achievements'
+
 import Blogs from '@/pages/Blogs'
 
 import Messages from '@/pages/Messages'
@@ -28,7 +28,7 @@ export default function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/certificates" element={<Certificates />} />
-            <Route path="/achievements" element={<Achievements />} />
+
             <Route path="/blogs" element={<Blogs />} />
 
             <Route path="/messages" element={<Messages />} />
