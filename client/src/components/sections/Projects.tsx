@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from '@/hooks/useInView'
 import type { Project, ProjectFilter } from '@/types'
+import { PROJECTS_DATA } from '@/data/portfolio'
 import api from '@/services/api'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { Eye, Star, Loader2 } from 'lucide-react'
@@ -151,19 +152,19 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState<ProjectFilter>('All')
-  const [projects, setProjects] = useState<Project[]>([])
-  const [loading, setLoading] = useState(true)
+  const [projects, setProjects] = useState<Project[]>(PROJECTS_DATA)
+  const [loading, setLoading] = useState(false)
   const { ref, isInView } = useInView()
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const res = await api.get('/projects')
-        setProjects(res.data.data.items || [])
+        if (res.data?.data?.items && res.data.data.items.length > 0) {
+          setProjects(res.data.data.items)
+        }
       } catch (err) {
-        console.error(err)
-      } finally {
-        setLoading(false)
+        // Keep static fallback projects
       }
     }
     fetchProjects()
@@ -175,9 +176,6 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
-      {/* Background */}
-      <div className="blob w-72 h-72 bg-violet-500 bottom-20 left-10 opacity-5" />
-
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div

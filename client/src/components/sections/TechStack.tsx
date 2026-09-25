@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useInView } from '@/hooks/useInView'
 import type { SkillCategory, Skill } from '@/types'
+import { SKILLS_DATA } from '@/data/portfolio'
 import api from '@/services/api'
 import {
-  SiReact, SiTypescript, SiNextdotjs, SiTailwindcss, SiHtml5,
+  SiReact, SiNextdotjs, SiTailwindcss, SiHtml5,
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
   SiJavascript, SiRedux,
   SiJsonwebtokens, SiVercel, SiCloudinary, SiDocker,
@@ -14,7 +15,7 @@ import { FaServer, FaDatabase, FaBrain, FaAws, FaCss3, FaRobot } from 'react-ico
 import { Loader2 } from 'lucide-react'
 
 const SKILL_ICON_MAP: Record<string, React.ReactElement> = {
-  react: <SiReact />, typescript: <SiTypescript />, nextjs: <SiNextdotjs />,
+  react: <SiReact />, nextjs: <SiNextdotjs />,
   tailwind: <SiTailwindcss />, html: <SiHtml5 />, css: <FaCss3 />,
   nodejs: <SiNodedotjs />, express: <SiExpress />, mongodb: <SiMongodb />,
   postgresql: <SiPostgresql />, javascript: <SiJavascript />,
@@ -27,7 +28,7 @@ const SKILL_ICON_MAP: Record<string, React.ReactElement> = {
 }
 
 const SKILL_COLORS: Record<string, string> = {
-  react: '#61DAFB', typescript: '#3178C6', nextjs: '#000000',
+  react: '#61DAFB', nextjs: '#000000',
   tailwind: '#06B6D4', html: '#E34F26', css: '#1572B6',
   nodejs: '#339933', express: '#000000', mongodb: '#47A248',
   postgresql: '#4169E1', javascript: '#F7DF1E',
@@ -95,19 +96,19 @@ function SkillCard({ skill, index }: SkillCardProps) {
 }
 
 export default function TechStack() {
-  const [skills, setSkills] = useState<Skill[]>([])
-  const [loading, setLoading] = useState(true)
+  const [skills, setSkills] = useState<Skill[]>(SKILLS_DATA)
+  const [loading, setLoading] = useState(false)
   const { ref, isInView } = useInView()
 
   useEffect(() => {
     const fetchSkills = async () => {
       try {
         const res = await api.get('/skills')
-        setSkills(res.data.data.items || [])
+        if (res.data?.data?.items && res.data.data.items.length > 0) {
+          setSkills(res.data.data.items)
+        }
       } catch (err) {
-        console.error(err)
-      } finally {
-        setLoading(false)
+        // Silently keep using static skills data
       }
     }
     fetchSkills()
@@ -117,9 +118,6 @@ export default function TechStack() {
 
   return (
     <section id="skills" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-bg)' }}>
-      {/* Background blobs */}
-      <div className="blob w-96 h-96 bg-blue-500 top-0 right-0 opacity-5 animation-delay-2000" />
-
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div

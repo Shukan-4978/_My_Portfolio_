@@ -70,9 +70,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-bg)' }}>
-      <div className="blob w-96 h-96 bg-blue-500 top-10 right-10 opacity-5 animation-delay-2000" />
-      <div className="blob w-72 h-72 bg-violet-500 bottom-10 left-10 opacity-5 animation-delay-4000" />
-
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from '@/hooks/useInView'
 import type { Experience as IExperience } from '@/types'
+import { EXPERIENCE_DATA } from '@/data/portfolio'
 import api from '@/services/api'
 import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa'
 import { Briefcase, Loader2 } from 'lucide-react'
@@ -29,19 +30,19 @@ function formatDate(date: string) {
 }
 
 export default function Experience() {
-  const [experiences, setExperiences] = useState<IExperience[]>([])
-  const [loading, setLoading] = useState(true)
+  const [experiences, setExperiences] = useState<IExperience[]>(EXPERIENCE_DATA)
+  const [loading, setLoading] = useState(false)
   const { ref, isInView } = useInView()
 
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
         const res = await api.get('/experience')
-        setExperiences(res.data.data.items || [])
+        if (res.data?.data?.items && res.data.data.items.length > 0) {
+          setExperiences(res.data.data.items)
+        }
       } catch (err) {
-        console.error(err)
-      } finally {
-        setLoading(false)
+        // Keep static fallback experiences
       }
     }
     fetchExperiences()
@@ -49,8 +50,6 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-24 relative" style={{ background: 'var(--section-bg)' }}>
-      <div className="blob w-72 h-72 bg-blue-500 top-20 right-20 opacity-5 animation-delay-4000" />
-
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div

@@ -82,10 +82,10 @@ function StatCard({ value, suffix = '', label, icon, start, delay }: StatCardPro
       whileInView="visible"
       viewport={{ once: true, margin: '-60px' }}
     >
-      <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center text-white text-xl shadow-lg">
+      <div className="w-10 h-10 rounded-lg bg-secondary text-foreground flex items-center justify-center text-lg border border-border">
         {icon}
       </div>
-      <div className="stat-number">
+      <div className="stat-number text-3xl font-extrabold text-foreground">
         {count}{suffix}
       </div>
       <p className="text-sm text-muted-foreground font-medium leading-snug">{label}</p>
@@ -103,39 +103,27 @@ function PhotoBlock({ isInView }: { isInView: boolean }) {
 
   return (
     <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] mx-auto flex items-center justify-center">
-      {/* Gradient ring */}
-      <div
-        className="absolute inset-0 rounded-full"
-        style={{
-          background: 'linear-gradient(135deg, #6366f1, #8b5cf6, #6366f1)',
-          padding: 3,
-          borderRadius: '50%',
-        }}
-      >
-        <div className="w-full h-full rounded-full bg-background" />
-      </div>
+      {/* Subtle clean ring */}
+      <div className="absolute inset-0 rounded-full border border-border" />
 
       {/* Avatar */}
       <motion.div
-        className="relative z-10 w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] rounded-full gradient-bg flex flex-col items-center justify-center shadow-2xl"
-        initial={{ scale: 0.7, opacity: 0 }}
+        className="relative z-10 w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] rounded-full border-2 border-border bg-card overflow-hidden shadow-sm"
+        initial={{ scale: 0.9, opacity: 0 }}
         animate={isInView ? { scale: 1, opacity: 1 } : {}}
-        transition={{ duration: 0.7, type: 'spring', stiffness: 120, damping: 14, delay: 0.2 }}
-        style={{
-          boxShadow: '0 0 80px rgba(99,102,241,0.35), 0 0 40px rgba(139,92,246,0.2)',
-        }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
-        <img src="/images/profile.png" alt="Shukan Prajapati" className="w-full h-full object-cover rounded-full p-2 bg-white dark:bg-slate-900" />
+        <img src="/images/profile.png" alt="Shukan Prajapati" className="w-full h-full object-cover" />
       </motion.div>
 
       {/* Experience badge */}
       <motion.div
-        className="absolute -bottom-4 left-1/2 -translate-x-1/2 glass-card px-4 py-2 text-xs font-bold text-center whitespace-nowrap"
-        initial={{ opacity: 0, y: 12 }}
+        className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-card border border-border rounded-full px-4 py-1.5 text-xs font-semibold text-center whitespace-nowrap shadow-sm"
+        initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 0.7, duration: 0.5 }}
+        transition={{ delay: 0.3, duration: 0.4 }}
       >
-        <span className="gradient-text">Fresher</span>
+        <span>Fresher</span>
       </motion.div>
 
       {/* Floating tech badges */}
@@ -191,18 +179,12 @@ function EducationItem({ edu, delay }: { edu: EduItem; delay: number }) {
       viewport={{ once: true, margin: '-40px' }}
     >
       {/* Left border line */}
-      <div
-        className="absolute left-3 top-0 bottom-0 w-px"
-        style={{
-          background:
-            'linear-gradient(to bottom, #6366f1, #8b5cf6, transparent)',
-        }}
-      />
+      <div className="absolute left-3 top-0 bottom-0 w-px bg-border" />
       {/* Dot */}
-      <div className="absolute left-[7px] top-1.5 w-3 h-3 rounded-full gradient-bg ring-2 ring-blue-500/30 group-hover:ring-blue-500/60 transition-all" />
+      <div className="absolute left-[7px] top-1.5 w-3 h-3 rounded-full bg-foreground border-2 border-background ring-1 ring-border" />
 
       {/* Card */}
-      <div className="glass-card p-4 group-hover:border-blue-500/30 transition-all">
+      <div className="glass-card p-4 transition-all">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
           <span className="tag text-xs">{edu.year}</span>
           {edu.grade && (

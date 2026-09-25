@@ -25,8 +25,6 @@ export default function Certificates() {
 
   return (
     <section id="certificates" className="py-24 relative overflow-hidden">
-      <div className="blob w-96 h-96 bg-violet-500 bottom-0 right-0 opacity-5 animation-delay-2000" />
-
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div

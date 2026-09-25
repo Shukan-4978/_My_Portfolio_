@@ -35,7 +35,7 @@ My journey in web development started with curiosity and has evolved into a deep
     },
   ],
   highlights: [
-    'Full Stack MERN expertise with TypeScript',
+    'Full Stack MERN expertise with modern JavaScript (ES6+)',
     'RESTful API design & development',
     'Database design & optimization',
     'Cloud deployment & DevOps basics',
@@ -47,7 +47,6 @@ My journey in web development started with curiosity and has evolved into a deep
 export const SKILLS_DATA: Skill[] = [
   // Frontend
   { _id: '1', name: 'React.js', icon: 'react', category: 'Frontend', level: 90, yearsExp: 2 },
-  { _id: '2', name: 'TypeScript', icon: 'typescript', category: 'Frontend', level: 85, yearsExp: 1.5 },
   { _id: '4', name: 'Tailwind CSS', icon: 'tailwind', category: 'Frontend', level: 90, yearsExp: 2 },
   { _id: '5', name: 'HTML5', icon: 'html', category: 'Frontend', level: 95, yearsExp: 3 },
   { _id: '6', name: 'CSS3', icon: 'css', category: 'Frontend', level: 90, yearsExp: 3 },
@@ -184,7 +183,7 @@ export const EXPERIENCE_DATA: Experience[] = [
       'Collaborated with the team to implement new features and improve application performance.',
       'Gained hands-on experience in building scalable RESTful APIs and responsive user interfaces.',
     ],
-    skills: ['React', 'Express', 'Node.js', 'MongoDB', 'TypeScript', 'Cloudinary', 'Tailwind CSS'],
+    skills: ['React', 'Express', 'Node.js', 'MongoDB', 'JavaScript', 'Cloudinary', 'Tailwind CSS'],
   },
   {
     _id: '2',

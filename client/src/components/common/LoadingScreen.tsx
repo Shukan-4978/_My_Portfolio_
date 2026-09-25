@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const DURATION_MS = 2400
+const DURATION_MS = 800
 
 export default function LoadingScreen() {
   const [visible,  setVisible]  = useState(true)
@@ -37,17 +37,12 @@ export default function LoadingScreen() {
           initial={{ opacity: 1 }}
           exit={{
             opacity: 0,
-            scale: 1.04,
-            transition: { duration: 0.55, ease: [0.4, 0, 0.2, 1] },
+            scale: 1.02,
+            transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] },
           }}
           aria-label="Loading portfolio…"
           aria-live="polite"
         >
-          {/* ── Background blobs ──────────────────────────────────── */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="blob w-96 h-96 bg-blue-500 top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
-            <div className="blob w-80 h-80 bg-violet-500 bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 animation-delay-2000" />
-          </div>
 
           {/* ── SP Monogram ──────────────────────────────────────── */}
           <motion.div
