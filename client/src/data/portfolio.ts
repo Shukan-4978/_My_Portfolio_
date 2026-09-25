@@ -16,9 +16,15 @@ export const HERO_DATA: HeroData = {
 }
 
 export const ABOUT_DATA: AboutData = {
-  bio: `I'm Shukan Prajapati, a passionate Full Stack MERN Developer who loves turning complex problems into elegant, user-friendly solutions. With a deep focus on clean code, performance, and modern design, I craft web applications that are both powerful and beautiful.
+  bio: `I’m Shukan Prajapati, a Full Stack MERN Developer and IT Engineering student passionate about building modern, practical, and user-friendly web applications.
 
-My journey in web development started with curiosity and has evolved into a deep expertise spanning the entire JavaScript ecosystem — from pixel-perfect React UIs to robust Node.js APIs and MongoDB databases.`,
+I work with JavaScript, React.js, Node.js, Express.js, and MongoDB to create complete web solutions, from responsive frontends to robust backend systems and databases.
+
+I enjoy turning ideas into real-world applications and solving problems through clean and efficient code. I have experience working with RESTful APIs, authentication, database management, API integration, and backend development.
+
+My focus is on building applications that are scalable, secure, responsive, and easy to maintain. I also pay attention to modern UI design and user experience to make applications both functional and visually appealing.
+
+I believe in continuously learning and improving my skills by working on real projects and exploring new technologies. My goal is to grow as a Software Developer / Full Stack Developer and contribute to meaningful software products.`,
   stats: {
     yearsOfExperience: 0,
     projectsCompleted: 5,
@@ -27,7 +33,7 @@ My journey in web development started with curiosity and has evolved into a deep
   },
   education: [
     {
-      degree: 'Bachelor of Engineering in Computer Science',
+      degree: 'Bachelor of Engineering in Information Technology',
       school: 'Gujarat Technological University',
       year: '2022 – 2026',
       grade: '8.21 CGPA',
